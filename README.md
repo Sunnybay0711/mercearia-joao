@@ -1,2 +1,2 @@
 # mercearia-joao
-SISTEMA MERCEARIA DO JOAO
+Sistema da Mercearia do João
