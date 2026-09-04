@@ -1,0 +1,323 @@
+/* ==========================================================================
+   1. VARIÁVEIS CSS E RESET
+   ========================================================================== */
+:root {
+  /* Cores Principais */
+  --primary-color: #8A2B59;        /* Burgundy Elegante */
+  --primary-hover: #6d2246;
+  --bg-color: #FAFAFA;
+  --card-bg: #FFFFFF;
+  --text-main: #2B2D42;
+  --text-muted: #6C757D;
+  --border-color: #E9ECEF;
+
+  /* Badges de Status (Cores Sutis) */
+  --status-concluido-bg: #E6F4EA;
+  --status-concluido-text: #137333;
+  --status-andamento-bg: #E8F0FE;
+  --status-andamento-text: #1A73E8;
+  --status-pendente-bg: #FEF7E0;
+  --status-pendente-text: #B06000;
+  --status-cancelado-bg: #FCE8E6;
+  --status-cancelado-text: #C5221F;
+
+  /* Espaçamentos e Estrutura */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --transition: all 0.2s ease-in-out;
+  --max-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ==========================================================================
+   2. CABEÇALHO E NAVEGAÇÃO
+   ========================================================================== */
+.main-header {
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-title {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.brand-title span {
+  font-weight: 300;
+  color: var(--text-muted);
+  font-size: 0.9em;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 500;
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+  background-color: rgba(138, 43, 89, 0.05);
+}
+
+.nav-link.active {
+  color: var(--primary-color);
+  background-color: rgba(138, 43, 89, 0.1);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   3. CONTAINER PRINCIPAL E METRICAS (CARDS)
+   ========================================================================== */
+.dashboard-container {
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  flex: 1;
+}
+
+.metrics-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card-metric {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.card-metric:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.metric-icon {
+  font-size: 1.8rem;
+  background-color: rgba(138, 43, 89, 0.08);
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.metric-info h3 {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.metric-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.metric-value span {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   4. TABELA DE ATENDIMENTOS
+   ========================================================================== */
+.table-section {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.section-title {
+  font-size: 1.125rem;
+  color: var(--text-main);
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.schedule-table th {
+  background-color: var(--bg-color);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.schedule-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.95rem;
+}
+
+.schedule-table tbody tr {
+  transition: var(--transition);
+}
+
+.schedule-table tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.015);
+}
+
+.col-time {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.col-client {
+  font-weight: 500;
+}
+
+.col-price {
+  font-weight: 600;
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.status-concluido {
+  background-color: var(--status-concluido-bg);
+  color: var(--status-concluido-text);
+}
+
+.status-andamento {
+  background-color: var(--status-andamento-bg);
+  color: var(--status-andamento-text);
+}
+
+.status-pendente {
+  background-color: var(--status-pendente-bg);
+  color: var(--status-pendente-text);
+}
+
+.status-cancelado {
+  background-color: var(--status-cancelado-bg);
+  color: var(--status-cancelado-text);
+}
+
+/* ==========================================================================
+   5. RODAPÉ
+   ========================================================================== */
+.main-footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  margin-top: auto;
+}
+
+/* ==========================================================================
+   6. RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================================================== */
+
+/* Tablet (Até 900px) */
+@media (max-width: 900px) {
+  .metrics-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile (Até 600px) */
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .main-nav ul {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+  }
+
+  .nav-link {
+    white-space: nowrap;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .metrics-section {
+    grid-template-columns: 1fr;
+  }
+
+  .schedule-table th, 
+  .schedule-table td {
+    white-space: nowrap;
+    padding: 0.75rem;
+  }
+}

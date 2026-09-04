@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Espaço Beleza Viva - Gestão</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="header-container">
+      <h1 class="brand-title">Espaço Beleza Viva <span>Gestão</span></h1>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#" class="nav-link active">Agenda</a></li>
+          <li><a href="#" class="nav-link">Serviços</a></li>
+          <li><a href="#" class="nav-link">Profissionais</a></li>
+          <li><a href="#" class="nav-link">Clientes</a></li>
+          <li><a href="#" class="nav-link">Relatórios</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="dashboard-container">
+
+    <section class="metrics-section" aria-label="Métricas do dia">
+      <div class="card-metric">
+        <div class="metric-icon">📅</div>
+        <div class="metric-info">
+          <h3>Agendamentos Hoje</h3>
+          <p class="metric-value">18 <span>atendimentos</span></p>
+        </div>
+      </div>
+
+      <div class="card-metric">
+        <div class="metric-icon">💰</div>
+        <div class="metric-info">
+          <h3>Estimado do Dia</h3>
+          <p class="metric-value">R$ 1.840,00</p>
+        </div>
+      </div>
+
+      <div class="card-metric">
+        <div class="metric-icon">✂️</div>
+        <div class="metric-info">
+          <h3>Equipe em Serviço</h3>
+          <p class="metric-value">6 <span>profissionais</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="table-section">
+      <h2 class="section-title">Próximos Atendimentos do Dia</h2>
+      <div class="table-responsive">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Horário</th>
+              <th>Cliente</th>
+              <th>Serviço</th>
+              <th>Profissional</th>
+              <th>Valor</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-time">09:00</td>
+              <td class="col-client">Ana Lima</td>
+              <td>Corte & Escova</td>
+              <td>Carla</td>
+              <td class="col-price">R$ 120,00</td>
+              <td><span class="status-badge status-concluido">Concluído</span></td>
+            </tr>
+            <tr>
+              <td class="col-time">10:30</td>
+              <td class="col-client">Carlos Eduardo</td>
+              <td>Barba & Cabelo</td>
+              <td>Marcos</td>
+              <td class="col-price">R$ 80,00</td>
+              <td><span class="status-badge status-andamento">Em Andamento</span></td>
+            </tr>
+            <tr>
+              <td class="col-time">11:15</td>
+              <td class="col-client">Juliana Paes</td>
+              <td>Colorimetria</td>
+              <td>Fernanda</td>
+              <td class="col-price">R$ 250,00</td>
+              <td><span class="status-badge status-pendente">Pendente</span></td>
+            </tr>
+            <tr>
+              <td class="col-time">14:00</td>
+              <td class="col-client">Roberto Alves</td>
+              <td>Corte Masculino</td>
+              <td>Marcos</td>
+              <td class="col-price">R$ 50,00</td>
+              <td><span class="status-badge status-cancelado">Cancelado</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2026 Espaço Beleza Viva. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
