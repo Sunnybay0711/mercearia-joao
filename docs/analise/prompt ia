@@ -1,0 +1,153 @@
+PAPEL, OBJETIVO E CONTEXTO
+
+# PAPEL
+Você é um designer de produto e desenvolvedor front-end especializado em interfaces web modernas, limpas e responsivas para prestadores de serviços e pequenos estabelecimentos.
+
+# OBJETIVO
+Crie a interface da página inicial (Dashboard de Agendamentos) para o sistema de gestão do "Espaço Beleza Viva", utilizando exclusivamente HTML5 e CSS3.
+Neste primeiro momento, o objetivo é construir apenas a camada visual e estrutural da aplicação a partir da especificação fornecida.
+Não implemente funcionalidades com JavaScript.
+
+# CONTEXTO
+O sistema será utilizado pela recepção e pelos profissionais do salão para acompanhar os atendimentos do dia. A página inicial deve funcionar como um painel central de controle, permitindo visualizar:
+
+Total de agendamentos confirmados para o dia;
+
+Faturamento estimado do dia;
+
+Profissionais ativos na escala de hoje;
+
+Próximos atendimentos agendados (tabela/lista).
+
+TECNOLOGIAS E ESTRUTURA DA PÁGINA
+
+# TECNOLOGIAS
+Utilize somente:
+
+HTML5
+
+CSS3 (com Variáveis CSS, Flexbox e/ou CSS Grid)
+
+Não utilize:
+
+JavaScript / Frameworks JS (React, Vue, etc.)
+
+Frameworks CSS (Bootstrap, Tailwind, etc.)
+
+Bibliotecas de componentes externas, backend ou bancos de dados.
+
+A estrutura HTML deve ser bem organizada para permitir a adição futura de scripts JavaScript.
+
+# ESTRUTURA DA PÁGINA
+1. Cabeçalho (<header>)
+
+Nome da aplicação: "Espaço Beleza Viva - Gestão";
+
+Menu de navegação (<nav>) contendo:
+
+Agenda (deve estar destacado visualmente como a página atual)
+
+Serviços
+
+Profissionais
+
+Clientes
+
+Relatórios
+
+INDICADORES E LISTA DE AGENDAMENTOS
+
+# 2. CARDS DE INDICADORES (MÉTRICAS DO DIA)
+Abaixo do cabeçalho, criar três cards de métricas em uma seção dedicada:
+
+Card 1 - Agendamentos Hoje: Título: "Agendamentos Hoje" | Ícone/elemento visual | Valor de exemplo: "18 atendimentos".
+
+Card 2 - Faturamento Estimado: Título: "Estimado do Dia" | Ícone/elemento visual | Valor de exemplo: "R$ 1.840,00".
+
+Card 3 - Profissionais Ativos: Título: "Equipe em Serviço" | Ícone/elemento visual | Valor de exemplo: "6 profissionais".
+
+# 3. SEÇÃO DE PRÓXIMOS ATENDIMENTOS
+Abaixo dos cards, criar a seção "Próximos Atendimentos do Dia" utilizando uma tabela HTML (<table>) estruturada semanticamente:
+
+Colunas: Horário, Cliente, Serviço, Profissional, Valor, Status.
+
+Dados Fictícios:
+
+09:00 — Ana Lima — Corte & Escova — Carla — R$ 120,00 — Concluído
+
+10:30 — Carlos Eduardo — Barba & Cabelo — Marcos — R$ 80,00 — Em Andamento
+
+11:15 — Juliana Paes — Colorimetria — Fernanda — R$ 250,00 — Pendente
+
+14:00 — Roberto Alves — Corte Masculino — Marcos — R$ 50,00 — Cancelado
+
+DESIGN, CORES E ESTADOS VISUAIS
+
+# DESIGN E HIERARQUIA VISUAL
+
+Estilo: Visual limpo, sofisticado, moderno e intuitivo.
+
+Estrutura: Cards com bordas sutis, cantos levemente arredondados (border-radius), sombras suaves (box-shadow) e bom espaçamento interno (padding).
+
+Hierarquia: 1. Navegação → 2. Cards de Métricas (com números em destaque) → 3. Tabela de Agendamentos.
+
+# CORES E IDENTIDADE
+
+Cor Principal: Tom elegante (ex: Rosa Elegante/Burgundy #8A2B59 ou Verde Botânico #2E5A44).
+
+Fundo e Neutros: Cores neutras e suaves para o fundo (#F8F9FA ou #FAFAFA) garantindo alto contraste com os textos.
+
+Badges de Status: Utilize cores distintas e sutis para as pílulas/badges de status na tabela:
+
+Concluído: Tom verde sutil
+
+Em Andamento: Tom azul sutil
+
+Pendente: Tom amarelo/laranja sutil
+
+Cancelado: Tom vermelho sutil
+
+# ESTADOS VISUAIS (CSS PURO)
+
+Efeito :hover sutil nos links do menu, linhas da tabela e cards.
+
+Estilização do link ativo no menu (.active).
+
+Estilos visuais diferenciados para cada tipo de Status do agendamento.
+
+RESPONSIVIDADE E ACESSIBILIDADE
+
+# RESPONSIVIDADE (MEDIA QUERIES)
+
+Desktop: Cabeçalho horizontal, 3 cards dispostos em linha, tabela ocupando a largura do contêiner.
+
+Tablet: Reorganização dos cards (ex: grid 2x2 ou ajuste de tamanho) e tabela ajustada.
+
+Mobile: Menu empilhado ou simplificado, cards organizados verticalmente (1 por linha) e tabela com rolagem horizontal (overflow-x: auto) para evitar quebra de layout.
+
+# ACESSIBILIDADE E HTML SEMÂNTICO
+
+Utilizar tags semânticas: <header>, <nav>, <main>, <section>, <table>, <thead>, <tbody>, <footer>.
+
+Hierarquia lógica de títulos (<h1>, <h2>, <h3>).
+
+Contraste de cores adequado para leitura.
+
+ENTREGA E CRITÉRIOS DE QUALIDADE
+
+# CRITÉRIOS DE ACEITE
+
+Código HTML5 limpo, semântico e bem indentado.
+
+Código CSS3 organizado, utilizando Variáveis CSS (:root) para cores, fontes e espaçamentos.
+
+Ausência total de bibliotecas externas, frameworks ou scripts JS.
+
+Layout 100% funcional e responsivo.
+
+# ENTREGA
+Forneça os códigos completos nos arquivos:
+
+index.html
+
+style.css (devidamente vinculado ao HTML).
